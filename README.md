@@ -80,7 +80,7 @@ $ npm run test:cov
 
 ## Postman Collection
 
-A Postman collection (`postman_collection.json`) is included with example requests for all endpoints.
+A Postman collection [postman_collection.json](https://github.com/tobslob/insurance-api/blob/main/postman_collection.json) is included with example requests for all endpoints.
 
 To import:
 
