@@ -1,5 +1,5 @@
 import express from 'express';
-import { policiesRouter } from './policies/policies.routes';
+import { policiesRouter } from './routes/policies.routes';
 import { requestLogger } from './common/middleware/logger.middleware';
 
 const app = express();

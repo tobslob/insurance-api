@@ -1,8 +1,8 @@
 import { PoliciesService } from '../src/policies/policies.service';
 import { ProductsService } from '../src/products/products.service';
-import { Product } from '../src/products/interfaces/product.interface';
-import { Policy } from '../src/policies/interfaces/policy.interface';
-import { CreatePolicyDto } from '../src/policies/dto/createPolicy.dto';
+import { Product } from '../src/type/product.interface';
+import { Policy } from '../src/type/policy.interface';
+import { CreatePolicyDto } from '../src/type/createPolicy.dto';
 
 const mockProducts: Product[] = [
   {
