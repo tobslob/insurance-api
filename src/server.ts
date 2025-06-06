@@ -1,8 +1,10 @@
 import express from 'express';
 import { policiesRouter } from './policies/policies.routes';
+import { requestLogger } from './common/middleware/logger.middleware';
 
 const app = express();
 app.use(express.json());
+app.use(requestLogger);
 
 app.get('/', (_req, res) => {
   res.send('Hello World!');
