@@ -1,6 +1,6 @@
-import { Policy } from './interfaces/policy.interface';
-import { CreatePolicyDto } from './dto/createPolicy.dto';
-import { UpdatePolicyDto } from './dto/updatePolicy.dto';
+import { Policy } from '../type/policy.interface';
+import { CreatePolicyDto } from '../type/createPolicy.dto';
+import { UpdatePolicyDto } from '../type/updatePolicy.dto';
 import policiesData from '../data/policies.json';
 import { ProductsService } from '../products/products.service';
 

@@ -1,9 +1,12 @@
 import { Router } from 'express';
 import { apiKeyMiddleware } from '../common/middleware/apiKey.middleware';
 import { ProductsService } from '../products/products.service';
-import { PoliciesService } from './policies.service';
-import { PoliciesController } from './policies.controller';
-import { validatePolicy, validatePolicyUpdate } from './policy.middleware';
+import { PoliciesService } from '../policies/policies.service';
+import { PoliciesController } from '../policies/policies.controller';
+import {
+  validatePolicy,
+  validatePolicyUpdate,
+} from '../policies/policy.middleware';
 
 const router = Router();
 
