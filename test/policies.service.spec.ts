@@ -36,7 +36,7 @@ describe('PoliciesService', () => {
       findById: (id: string) => mockProducts.find((p) => p.id === id),
     } as ProductsService;
     service = new PoliciesService(productsService);
-    (service as any).policies = [...mockPolicies];
+    (service as unknown as { policies: Policy[] }).policies = [...mockPolicies];
   });
 
   it('should return policy by id with full product', () => {

@@ -18,10 +18,19 @@ app.use((_req, res) => {
 });
 
 // Global error handler
-app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-  console.error(err);
-  res.status(500).json({ message: 'Internal Server Error' });
-});
+
+app.use(
+  (
+    err: any,
+    _req: express.Request,
+    res: express.Response,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _next: express.NextFunction,
+  ) => {
+    console.error(err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  },
+);
 
 export { app };
 

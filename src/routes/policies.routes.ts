@@ -3,7 +3,10 @@ import { apiKeyMiddleware } from '../common/middleware/apiKey.middleware';
 import { ProductsService } from '../products/products.service';
 import { PoliciesService } from '../policies/policies.service';
 import { PoliciesController } from '../policies/policies.controller';
-import { validatePolicy, validatePolicyUpdate } from '../policies/policy.middleware';
+import {
+  validatePolicy,
+  validatePolicyUpdate,
+} from '../policies/policy.middleware';
 
 const router = Router();
 
