@@ -1,0 +1,140 @@
+{
+  "info": {
+    "name": "NestJS Insurance API",
+    "description": "Postman collection for all endpoints in the NestJS Insurance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "nestjs-insurance-api-collection"
+  },
+  "item": [
+    {
+      "name": "GET Policy by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/policies/pol_001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "policies",
+            "pol_001"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET Policies by Customer Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/policies?customerName=Alice",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "policies"
+          ],
+          "query": [
+            {
+              "key": "customerName",
+              "value": "Alice"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST Create Policy",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "secret-api-key"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"pol_999\",\n  \"productId\": \"prod_motor\",\n  \"customerName\": \"Test User\",\n  \"startDate\": \"2025-01-01\",\n  \"endDate\": \"2026-01-01\",\n  \"premium\": 500,\n  \"status\": \"active\",\n  \"createdAt\": \"2025-05-19T15:03:38.067510Z\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/policies",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "policies"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT Update Policy",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "secret-api-key"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"premium\": 550\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/policies/pol_999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "policies",
+            "pol_999"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DELETE Policy",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "secret-api-key"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/policies/pol_999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "policies",
+            "pol_999"
+          ]
+        }
+      }
+    }
+  ]
+}
